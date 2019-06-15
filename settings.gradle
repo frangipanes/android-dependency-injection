@@ -1,0 +1,2 @@
+rootProject.name = 'Android Dependency Injection'
+include ':androidlibrary'
