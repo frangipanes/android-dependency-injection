@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    buildToolsVersion '28.0.3'
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 28
+        targetSdkVersion 28
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlinVersion"
+    testImplementation "androidx.test:core:1.2.0"
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.mockito:mockito-core:2.23.4"
+    androidTestImplementation "androidx.test:runner:1.2.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.2.0"
+}
